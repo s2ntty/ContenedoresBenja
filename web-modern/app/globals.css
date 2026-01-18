@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Custom Design System */
+  --color-primary: hsl(25, 85%, 55%);
+  --color-primary-light: hsl(25, 85%, 65%);
+  --color-primary-dark: hsl(25, 85%, 45%);
+  --color-secondary: hsl(210, 25%, 20%);
+  --color-accent: hsl(205, 70%, 50%);
+
+  --color-bg-dark: hsl(210, 20%, 12%);
+  --color-bg-darker: hsl(210, 20%, 8%);
+  --color-surface: hsl(210, 18%, 20%);
+  --color-surface-light: hsl(210, 15%, 28%);
+
+  --color-text-primary: hsl(0, 0%, 98%);
+  --color-text-secondary: hsl(0, 0%, 75%);
+  --color-text-muted: hsl(0, 0%, 55%);
+
+  /* Fonts */
+  --font-outfit: var(--font-outfit), sans-serif;
+  --font-bebas: var(--font-bebas), sans-serif;
+
+  /* Animations */
+  --animate-fade-in-up: fadeInUp 1s ease-out;
+  --animate-title-glow: titleGlow 3s ease-in-out infinite;
+  --animate-pulse-slow: pulse 2s infinite;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes titleGlow {
+
+    0%,
+    100% {
+      filter: brightness(1);
+    }
+
+    50% {
+      filter: brightness(1.2);
+    }
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      box-shadow: 0 4px 20px rgba(235, 152, 78, 0.4);
+    }
+
+    50% {
+      box-shadow: 0 4px 30px rgba(235, 152, 78, 0.6);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  font-family: var(--font-outfit), sans-serif;
+}

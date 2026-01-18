@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenedores Benja - Servicios de Contenedores y Transporte</title>
+    <meta name="description"
+        content="Contenedores Benja ofrece servicios profesionales de contenedores, camiones y minipala para construcción y obras. Soluciones confiables para tu proyecto.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Contenedores Benja</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="services.html" class="nav-link">Servicio</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Image Carousel -->
+    <section id="inicio" class="hero">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="images/truck_real.jpg" alt="Camión con contenedores Benja">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/container_1.png" alt="Servicio de contenedores">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/container_2.png" alt="Transporte de contenedores">
+            </div>
+            <div class="carousel-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Contenedores</span>
+                <span class="title-line">Benja</span>
+            </h1>
+            <p class="hero-subtitle">Bateas, aridos y servicios de maquinaria</p>
+
+            <a href="services.html" class="service-card">
+                <div class="card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                        </path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Nuestros Servicios</h3>
+                    <p>Descubre lo que podemos crear para ti</p>
+                </div>
+                <div class="card-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <!-- Carousel Navigation Dots -->
+        <div class="carousel-dots">
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+            <button class="dot" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="nosotros-section reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Nosotros</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="nosotros-content">
+                <div class="nosotros-text">
+                    <h3>Contenedores Benja</h3>
+                    <p>Somos una empresa dedicada al servicio de contenedores, transporte de áridos y alquiler de
+                        maquinaria pesada. Con años de experiencia en el sector de la construcción, nos especializamos
+                        en brindar soluciones eficientes y confiables para obras de todo tipo.</p>
+
+                    <p>Nuestro compromiso es ofrecer un servicio de calidad, puntual y profesional, adaptándonos a las
+                        necesidades específicas de cada proyecto. Contamos con equipamiento moderno y un equipo
+                        capacitado para garantizar la satisfacción de nuestros clientes.</p>
+
+                    <div class="nosotros-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>Experiencia</h4>
+                                <p>Años de trayectoria en el rubro</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>Confiabilidad</h4>
+                                <p>Servicio puntual y profesional</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>Equipamiento</h4>
+                                <p>Maquinaria moderna y bien mantenida</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nosotros-image">
+                    <img src="images/truck_real.jpg" alt="Contenedores Benja - Nuestro equipo">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto-section reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contacto-content">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h3>Envíanos tu consulta</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+54 297 ...">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="3" required
+                                placeholder="Tu consulta..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span>Enviar</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper">
+                    <h3>Información de contacto</h3>
+
+                    <div class="contact-info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="info-text">
+                                <h4>Teléfono</h4>
+                                <p>297-4681748</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p>info@contenedoresbenja.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="info-text">
+                                <h4>Ubicación</h4>
+                                <p>Comodoro Rivadavia, Chubut</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="info-text">
+                                <h4>Horario</h4>
+                                <p>Lunes a Viernes: 8:00 - 18:00</p>
+                                <p>Sábados: 9:00 - 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Contenedores Benja</h3>
+                    <p>Bateas, áridos y servicios de maquinaria</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>Tel: 297-4681748</p>
+                    <p>Email: info@contenedoresbenja.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Contenedores Benja. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container" id="chatbot">
+        <!-- Chat Window -->
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>Asistente Virtual</h3>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            <div class="chatbot-body" id="chatbotBody">
+                <div class="chatbot-message bot-message">
+                    <p>¡Hola! Soy el asistente virtual de Contenedores Benja. Selecciona un servicio para comenzar:</p>
+                </div>
+                <!-- Initial Options -->
+                <div class="chatbot-options" id="chatOptions">
+                    <button class="chat-option" data-option="bateas">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                        </svg>
+                        Bateas / Contenedores
+                    </button>
+                    <button class="chat-option" data-option="aridos">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Tierra / Áridos
+                    </button>
+                    <button class="chat-option" data-option="maquinaria">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                            </path>
+                        </svg>
+                        Mini Pala / Maquinaria
+                    </button>
+                    <button class="chat-option" data-option="consultas">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Otras consultas
+                    </button>
+                </div>
+            </div>
+            <!-- New Input Area -->
+            <div class="chatbot-input-area">
+                <input type="text" id="chatInput" placeholder="Escribe tu respuesta..." disabled>
+                <button id="chatSendBtn" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/5492974309758" target="_blank" class="whatsapp-float" title="Chat en WhatsApp">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-8.68-2.031-.967-.272-.297-.471-.446-.917-.446-.445 0-.965.174-1.46.719-.495.545-1.908 1.865-1.908 4.548 0 2.682 1.957 5.274 2.229 5.645.271.373 3.824 5.835 9.27 8.017 3.626 1.453 4.363 1.163 5.155 1.089.792-.074 1.758-.718 2.006-1.411.248-.694.248-1.289.173-1.413z" />
+            </svg>
+        </a>
+
+        <!-- Main Toggle Button -->
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <svg class="chat-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <svg class="close-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" style="display: none;">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+```
