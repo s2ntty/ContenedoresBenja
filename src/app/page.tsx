@@ -22,6 +22,7 @@ export default function Home() {
   } = useChatbot();
 
   const [inputValue, setInputValue] = useState("");
+  const [showCredits, setShowCredits] = useState(false);
 
   const slides = [
     { src: "/images/truck_real.jpg", alt: "Camión con contenedores Benja" },
@@ -65,8 +66,8 @@ export default function Home() {
     <div className="font-outfit text-white bg-bg-dark min-h-screen selection:bg-primary selection:text-white">
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-bg-dark/95 py-2 shadow-md'
-          : 'bg-bg-dark/70 backdrop-blur-xl py-4 border-b border-white/10'
+        ? 'bg-bg-dark/95 py-2 shadow-md'
+        : 'bg-bg-dark/70 backdrop-blur-xl py-4 border-b border-white/10'
         }`}>
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex justify-between items-center">
           <div className="logo cursor-pointer" onClick={() => scrollToSection('inicio')}>
@@ -79,6 +80,7 @@ export default function Home() {
             <li><Link href="/services" className="text-white/75 hover:text-white transition-colors text-base font-medium relative group">Servicio<span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-0.5 bg-gradient-to-r from-primary to-yellow-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></Link></li>
             <li><button onClick={() => scrollToSection('nosotros')} className="text-white/75 hover:text-white transition-colors text-base font-medium relative group">Nosotros<span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-0.5 bg-gradient-to-r from-primary to-yellow-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></button></li>
             <li><button onClick={() => scrollToSection('contacto')} className="text-white/75 hover:text-white transition-colors text-base font-medium relative group">Contacto<span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-0.5 bg-gradient-to-r from-primary to-yellow-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></button></li>
+            <li><button onClick={() => setShowCredits(true)} className="text-white/75 hover:text-white transition-colors text-base font-medium relative group">Creado por<span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-0.5 bg-gradient-to-r from-primary to-yellow-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></button></li>
           </ul>
         </div>
       </nav>
@@ -262,6 +264,8 @@ export default function Home() {
         </div>
       </section>
 
+
+
       {/* Footer */}
       <footer className="bg-bg-darker border-t border-white/10 py-12">
         <div className="max-w-[1400px] mx-auto px-8">
@@ -320,8 +324,8 @@ export default function Home() {
           {messages.map((msg, i) => (
             <div key={i} className={`flex max-w-[85%] ${msg.sender === 'user' ? 'self-end justify-end' : 'self-start'}`}>
               <p className={`p-3 text-sm border border-white/10 ${msg.sender === 'user'
-                  ? 'bg-gradient-to-r from-primary to-yellow-500 text-white rounded-t-xl rounded-bl-xl'
-                  : 'bg-surface-light text-white/90 rounded-t-xl rounded-br-xl'
+                ? 'bg-gradient-to-r from-primary to-yellow-500 text-white rounded-t-xl rounded-bl-xl'
+                : 'bg-surface-light text-white/90 rounded-t-xl rounded-br-xl'
                 } `} dangerouslySetInnerHTML={{ __html: msg.text }} />
             </div>
           ))}
@@ -370,6 +374,115 @@ export default function Home() {
           </form>
         </div>
       </div>
+
+      {/* Credits Modal */}
+      {showCredits && (
+        <div className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in" onClick={() => setShowCredits(false)}>
+          <div className="relative w-full max-w-4xl bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 md:p-8 overflow-y-auto max-h-[90vh] shadow-[0_0_50px_rgba(0,0,0,0.5)]" onClick={e => e.stopPropagation()}>
+            <button
+              onClick={() => setShowCredits(false)}
+              className="absolute top-4 right-4 text-white/50 hover:text-white hover:bg-white/10 rounded-full p-1 transition-all"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+
+            <h2 className="font-bebas text-4xl mb-8 text-center bg-gradient-to-r from-primary to-yellow-500 bg-clip-text text-transparent">Créditos del Proyecto</h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Creator Card */}
+              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 flex flex-col items-center text-center hover:border-primary/50 transition-all duration-300">
+                <div className="relative w-[120px] h-[120px] mb-6">
+                  <div className="absolute inset-0 rounded-full border-[3px] border-primary shadow-[0_0_20px_rgba(235,152,78,0.3)]"></div>
+                  <Image
+                    src="/creator.jpg"
+                    alt="s2ntty - Creador"
+                    width={120}
+                    height={120}
+                    className="rounded-full object-cover w-full h-full"
+                  />
+                  <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-400 border-[3px] border-bg-darker rounded-full shadow-sm"></div>
+                </div>
+
+                <h3 className="text-sm uppercase tracking-widest text-white/50 mb-2">Creado por</h3>
+                <h2 className="font-bebas text-4xl bg-gradient-to-r from-primary to-yellow-500 bg-clip-text text-transparent mb-6 tracking-wide">s2ntty</h2>
+
+                <div className="flex gap-4">
+                  {[
+                    { href: "https://instagram.com", label: "Instagram", icon: <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>, icon2: <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>, icon3: <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line> },
+                    { href: "https://linkedin.com", label: "LinkedIn", icon: <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>, icon2: <rect x="2" y="9" width="4" height="12"></rect>, icon3: <circle cx="4" cy="4" r="2"></circle> },
+                    { href: "https://github.com", label: "GitHub", icon: <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path> }
+                  ].map((social, idx) => (
+                    <a
+                      key={idx}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 flex items-center justify-center bg-white/5 border border-white/10 rounded-full text-white/75 hover:bg-primary hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                      aria-label={social.label}
+                    >
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        {social.icon}
+                        {social.icon2}
+                        {social.icon3}
+                      </svg>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tech Stack Card */}
+              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 flex flex-col hover:border-primary/50 transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-6 pb-4 border-b border-white/10 text-white">Herramientas Utilizadas</h3>
+
+                <div className="grid grid-cols-2 gap-4 flex-1 content-start">
+                  {[
+                    {
+                      name: "Next.js",
+                      color: "bg-black hover:bg-black/80",
+                      icon: <path d="M15 12V5h-2v7l-5-7H6v14h2v-7l5 7h2V5z" strokeWidth="0" fill="currentColor" />, // Simplified N for Next.js-like visual
+                      icon2: null
+                    },
+                    {
+                      name: "React",
+                      color: "bg-[#00d8ff]/10 text-[#00d8ff]",
+                      icon: <circle cx="12" cy="12" r="2" fill="currentColor" />,
+                      icon2: <g stroke="currentColor" fill="none"><ellipse rx="10" ry="4.5" cx="12" cy="12" transform="rotate(0 12 12)" /><ellipse rx="10" ry="4.5" cx="12" cy="12" transform="rotate(60 12 12)" /><ellipse rx="10" ry="4.5" cx="12" cy="12" transform="rotate(120 12 12)" /></g>
+                    },
+                    {
+                      name: "Tailwind CSS",
+                      color: "bg-[#38bdf8]/10 text-[#38bdf8]",
+                      icon: <path d="M12.5 7.5c2-2 5.5-1 7.5.5s3 5.5 1 7.5c-2 2-5.5 1-7.5-.5s-3-5.5-1-7.5z" />, // Abstract shape
+                      icon2: <path d="M4 14.5c2-2 5.5-1 7.5.5s3 5.5 1 7.5c-2 2-5.5 1-7.5-.5s-3-5.5-1-7.5z" />
+                    },
+                    {
+                      name: "TypeScript",
+                      color: "bg-[#3178c6]/10 text-[#3178c6]",
+                      icon: <path d="M4 2h16c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2z"></path>,
+                      icon2: <text x="7" y="17" fontSize="14" fontWeight="bold" fill="currentColor" stroke="none">TS</text>
+                    }
+                  ].map((tech, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-transparent hover:bg-white/10 hover:translate-x-1 transition-all duration-300"
+                    >
+                      <div className={`w-8 h-8 flex items-center justify-center rounded-md shrink-0 text-white shadow-sm ${tech.color}`}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          {tech.icon}
+                          {tech.icon2}
+                        </svg>
+                      </div>
+                      <span className="text-sm font-medium text-white/75">{tech.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
